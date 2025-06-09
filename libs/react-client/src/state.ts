@@ -246,3 +246,14 @@ export const mcpState = atom<IMcp[]>({
   default: [],
   effects: [localStorageEffect<IMcp[]>('mcp_storage_key')]
 });
+
+export const responseProgressState = atom<{
+  thread_id: string;
+  percentage: string;
+}>({
+  key: 'ResponseProgress',
+  default: {
+    thread_id: '',
+    percentage: ''
+  }
+});
