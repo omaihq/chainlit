@@ -24,6 +24,7 @@ import {
   loadingState,
   mcpState,
   messagesState,
+  responseProgressState,
   resumeThreadErrorState,
   sessionIdState,
   sessionState,
@@ -70,6 +71,8 @@ const useChatSession = () => {
   const wavStreamPlayer = useRecoilValue(wavStreamPlayerState);
   const wavRecorder = useRecoilValue(wavRecorderState);
   const setMessages = useSetRecoilState(messagesState);
+  const setResponseProgress = useSetRecoilState(responseProgressState);
+
   const setAskUser = useSetRecoilState(askUserState);
   const setCallFn = useSetRecoilState(callFnState);
   const setCommands = useSetRecoilState(commandsState);
@@ -361,6 +364,16 @@ const useChatSession = () => {
               return { title: prev?.title || '', elements: elements, key };
             });
           }
+        }
+      );
+
+      socket.on(
+        'response_progress',
+        (data: { thread_id: string; percentage: string }) => {
+          setResponseProgress((prev) => ({
+            ...prev,
+            [data.thread_id]: parseInt(data.percentage, 10)
+          }));
         }
       );
 
