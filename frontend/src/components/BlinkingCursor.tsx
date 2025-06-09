@@ -1,4 +1,3 @@
-import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
@@ -14,7 +13,7 @@ interface Props {
   whitespace?: boolean;
 }
 
-export default function BlinkingCursor({ whitespace }: Props) {
+export default function BlinkingCursor(_: Props) {
   const { id } = useParams();
   const progressState = useRecoilValue(responseProgressState);
 
@@ -32,14 +31,20 @@ export default function BlinkingCursor({ whitespace }: Props) {
 
   if (!showInteractiveProgress) {
     return (
-      <span
-        className={cn(
-          'inline-block h-3.5 w-3.5 bg-foreground rounded-full animate-pulse',
-          whitespace && 'ml-2'
-        )}
-      />
+      <div className="flex gap-2 items-center pt-6">
+        <Loader className="!size-4" />
+        <div className="text-muted-foreground">
+          {messageForProgress(progress)}
+        </div>
+      </div>
     );
   }
+  //   <span
+  //   className={cn(
+  //     'inline-block h-3.5 w-3.5 bg-foreground rounded-full animate-pulse',
+  //     whitespace && 'ml-2'
+  //   )}
+  // />
 
   return (
     <div className="grid gap-1">
