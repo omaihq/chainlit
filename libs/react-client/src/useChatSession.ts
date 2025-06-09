@@ -24,11 +24,13 @@ import {
   loadingState,
   mcpState,
   messagesState,
+  responseProgressState,
   resumeThreadErrorState,
   sessionIdState,
   sessionState,
   sideViewState,
   tasklistState,
+  threadHistoryState,
   threadIdToResumeState,
   tokenCountState,
   wavRecorderState,
@@ -70,6 +72,8 @@ const useChatSession = () => {
   const wavStreamPlayer = useRecoilValue(wavStreamPlayerState);
   const wavRecorder = useRecoilValue(wavRecorderState);
   const setMessages = useSetRecoilState(messagesState);
+  const setResponseProgress = useSetRecoilState(responseProgressState);
+
   const setAskUser = useSetRecoilState(askUserState);
   const setCallFn = useSetRecoilState(callFnState);
   const setCommands = useSetRecoilState(commandsState);
@@ -82,6 +86,7 @@ const useChatSession = () => {
   const [chatProfile, setChatProfile] = useRecoilState(chatProfileState);
   const idToResume = useRecoilValue(threadIdToResumeState);
   const setThreadResumeError = useSetRecoilState(resumeThreadErrorState);
+  const setThreadHistory = useSetRecoilState(threadHistoryState);
 
   const [currentThreadId, setCurrentThreadId] =
     useRecoilState(currentThreadIdState);
@@ -364,6 +369,17 @@ const useChatSession = () => {
         }
       );
 
+      socket.on(
+        'response_progress',
+        (data: { thread_id: string; percentage: string }) => {
+          setResponseProgress((prev) => ({
+            ...prev,
+            thread_id: data.thread_id,
+            percentage: data.percentage
+          }));
+        }
+      );
+
       socket.on('element', (element: IElement) => {
         if (!element.url && element.chainlitKey) {
           element.url = client.getElementUrl(element.chainlitKey, sessionId);
@@ -445,6 +461,25 @@ const useChatSession = () => {
             break;
         }
       });
+
+      // listen to thread_renamed event
+      socket.on(
+        'thread_renamed',
+        (data: { thread_id: string; new_name: string }) => {
+          setThreadHistory((prev) => {
+            if (!prev?.threads) return prev;
+            const updatedThreads = prev.threads.map((thread) =>
+              thread.id === data.thread_id
+                ? { ...thread, name: data.new_name }
+                : thread
+            );
+            return {
+              ...prev,
+              threads: updatedThreads
+            };
+          });
+        }
+      );
     },
     [setSession, sessionId, idToResume, chatProfile]
   );
