@@ -82,14 +82,19 @@ export function ThreadList({
   const apiClient = useContext(ChainlitContext);
 
   const sortedTimeGroupKeys = useMemo(() => {
-    if (!threadHistory?.timeGroupedThreads) return [];
+    if (!threadHistory?.threads) return [];
+
+    // Use our custom grouping function instead of the library's
+    const groupedThreads = groupThreadsByUTCDate(threadHistory.threads);
+
     const fixedOrder = [
       'Today',
       'Yesterday',
       'Previous 7 days',
       'Previous 30 days'
     ];
-    return Object.keys(threadHistory.timeGroupedThreads).sort((a, b) => {
+
+    return Object.keys(groupedThreads).sort((a, b) => {
       const aIndex = fixedOrder.indexOf(a);
       const bIndex = fixedOrder.indexOf(b);
       if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
@@ -97,9 +102,9 @@ export function ThreadList({
       if (bIndex !== -1) return 1;
       return a.localeCompare(b);
     });
-  }, [threadHistory?.timeGroupedThreads]);
+  }, [threadHistory?.threads]);
 
-  if (isFetching || (!threadHistory?.timeGroupedThreads && isLoadingMore)) {
+  if (isFetching || (!threadHistory?.threads && isLoadingMore)) {
     return (
       <div className="flex items-center justify-center p-2">
         <Loader />
@@ -115,7 +120,7 @@ export function ThreadList({
     );
   }
 
-  if (!threadHistory || size(threadHistory?.timeGroupedThreads) === 0) {
+  if (!threadHistory || size(threadHistory?.threads) === 0) {
     return (
       <Alert variant="info" className="m-3">
         <Translator path="threadHistory.sidebar.empty" />
@@ -284,7 +289,7 @@ export function ThreadList({
       </Dialog>
       <TooltipProvider delayDuration={300}>
         {sortedTimeGroupKeys.map((group) => {
-          const items = threadHistory!.timeGroupedThreads![group];
+          const items = groupThreadsByUTCDate(threadHistory!.threads!)[group];
           return (
             <SidebarGroup key={group}>
               <SidebarGroupLabel>{getTimeGroupLabel(group)}</SidebarGroupLabel>
@@ -353,4 +358,53 @@ export function ThreadList({
       ) : null}
     </>
   );
+}
+
+function groupThreadsByUTCDate(threads: ThreadHistory['threads']) {
+  if (!threads) return {};
+
+  const groupedData: { [key: string]: typeof threads } = {};
+
+  // Get today's date in UTC
+  const now = new Date();
+  const today = new Date(
+    Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())
+  );
+
+  threads.forEach((thread) => {
+    // Convert thread date to UTC
+    const threadDate = new Date(thread.createdAt);
+    const threadDateUTC = new Date(
+      Date.UTC(
+        threadDate.getFullYear(),
+        threadDate.getMonth(),
+        threadDate.getDate()
+      )
+    );
+
+    const daysDiff = Math.floor(
+      (today.getTime() - threadDateUTC.getTime()) / 86400000
+    );
+
+    let category: string;
+    if (daysDiff === 0) {
+      category = 'Today';
+    } else if (daysDiff === 1) {
+      category = 'Yesterday';
+    } else if (daysDiff <= 7) {
+      category = 'Previous 7 days';
+    } else if (daysDiff <= 30) {
+      category = 'Previous 30 days';
+    } else {
+      category = threadDate.toLocaleString('default', {
+        month: 'long',
+        year: 'numeric'
+      });
+    }
+
+    groupedData[category] ??= [];
+    groupedData[category].push(thread);
+  });
+
+  return groupedData;
 }
