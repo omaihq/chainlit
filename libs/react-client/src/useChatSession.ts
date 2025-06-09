@@ -372,7 +372,8 @@ const useChatSession = () => {
         (data: { thread_id: string; percentage: string }) => {
           setResponseProgress((prev) => ({
             ...prev,
-            [data.thread_id]: parseInt(data.percentage, 10)
+            thread_id: data.thread_id,
+            percentage: data.percentage
           }));
         }
       );

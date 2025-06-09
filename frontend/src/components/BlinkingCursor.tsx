@@ -17,22 +17,16 @@ export default function BlinkingCursor({ whitespace }: Props) {
   const { id } = useParams();
   const progressState = useRecoilValue(responseProgressState);
 
-  console.log('progressState', progressState);
-
   const [progress, setProgress] = useState(0);
 
   const showInteractiveProgress = id === progressState.thread_id;
 
-  console.log('showInteractiveProgress', showInteractiveProgress);
-
   useEffect(() => {
-    if (showInteractiveProgress) {
+    if (!showInteractiveProgress) {
       return;
     }
 
-    const progressPercentage = Number(progressState.percentage);
-
-    setProgress(progressPercentage);
+    setProgress(parseInt(progressState.percentage, 10));
   }, [progressState, showInteractiveProgress]);
 
   if (!showInteractiveProgress) {
@@ -46,5 +40,5 @@ export default function BlinkingCursor({ whitespace }: Props) {
     );
   }
 
-  return <Progress value={progress} />;
+  return <Progress value={progress} className="" />;
 }
