@@ -19,7 +19,6 @@ export default function ThreadPage() {
   const { id } = useParams();
   const { config } = useConfig();
   const threadHistory = useRecoilValue(threadHistoryState);
-
   const setThreadHistory = useSetRecoilState(threadHistoryState);
 
   const { threadId } = useChatMessages();
@@ -51,7 +50,9 @@ export default function ThreadPage() {
   return (
     <Page>
       <>
-        {id ? <AutoResumeThread id={id} /> : null}
+        {config?.threadResumable && !isCurrentThread ? (
+          <AutoResumeThread id={id!} />
+        ) : null}
         {config?.threadResumable ? (
           isCurrentThread ? (
             currentIsMostRecent ? (
