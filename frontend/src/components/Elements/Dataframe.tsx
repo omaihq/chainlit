@@ -1,3 +1,4 @@
+import { IDataframeElement } from '@/react-client';
 import {
   ColumnDef,
   flexRender,
@@ -8,8 +9,6 @@ import {
 } from '@tanstack/react-table';
 import { ArrowDown, ArrowUp } from 'lucide-react';
 import { useCallback, useMemo } from 'react';
-
-import { IDataframeElement } from '@chainlit/react-client';
 
 import Alert from '@/components/Alert';
 import { Loader } from '@/components/Loader';

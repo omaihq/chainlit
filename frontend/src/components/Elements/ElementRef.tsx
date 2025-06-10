@@ -1,7 +1,6 @@
 import { MessageContext } from '@/contexts/MessageContext';
+import type { IMessageElement } from '@/react-client';
 import { useContext } from 'react';
-
-import type { IMessageElement } from '@chainlit/react-client';
 
 interface ElementRefProps {
   element: IMessageElement;

@@ -1,6 +1,5 @@
+import { useChatInteract } from '@/react-client';
 import React, { useState } from 'react';
-
-import { useChatInteract } from '@chainlit/react-client';
 
 import { Translator } from '@/components/i18n';
 import { Button } from '@/components/ui/button';

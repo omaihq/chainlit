@@ -1,6 +1,5 @@
+import { type IVideoElement } from '@/react-client';
 import ReactPlayer from 'react-player';
-
-import { type IVideoElement } from '@chainlit/react-client';
 
 const VideoElement = ({ element }: { element: IVideoElement }) => {
   if (!element.url) {

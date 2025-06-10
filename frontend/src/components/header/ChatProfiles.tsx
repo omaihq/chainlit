@@ -1,12 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
-
 import {
   ChainlitContext,
   useChatInteract,
   useChatMessages,
   useChatSession,
   useConfig
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { useContext, useEffect, useState } from 'react';
 
 import { Markdown } from '@/components/Markdown';
 import {

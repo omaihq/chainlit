@@ -1,14 +1,8 @@
 import getRouterBasename from '@/lib/router';
+import { useApi, useAuth, useChatInteract, useConfig } from '@/react-client';
 import App from 'App';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
-import {
-  useApi,
-  useAuth,
-  useChatInteract,
-  useConfig
-} from '@chainlit/react-client';
 
 export default function AppWrapper() {
   const [translationLoaded, setTranslationLoaded] = useState(false);

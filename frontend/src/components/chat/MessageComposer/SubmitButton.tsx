@@ -1,8 +1,4 @@
-import {
-  useChatData,
-  useChatInteract,
-  useChatMessages
-} from '@chainlit/react-client';
+import { useChatData, useChatInteract, useChatMessages } from '@/react-client';
 
 import { Send } from '@/components/icons/Send';
 import { Stop } from '@/components/icons/Stop';

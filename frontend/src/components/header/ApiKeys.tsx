@@ -1,7 +1,6 @@
+import { useConfig } from '@/react-client';
 import { KeyRound } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-import { useConfig } from '@chainlit/react-client';
 
 import { Button } from '@/components/ui/button';
 import {

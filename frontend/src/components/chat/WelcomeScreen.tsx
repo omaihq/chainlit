@@ -1,19 +1,18 @@
 import { cn, hasMessage } from '@/lib/utils';
 import {
+  ChainlitContext,
+  FileSpec,
+  useChatMessages,
+  useChatSession,
+  useConfig
+} from '@/react-client';
+import {
   MutableRefObject,
   useContext,
   useEffect,
   useMemo,
   useState
 } from 'react';
-
-import {
-  ChainlitContext,
-  FileSpec,
-  useChatMessages,
-  useChatSession,
-  useConfig
-} from '@chainlit/react-client';
 
 import { Logo } from '@/components/Logo';
 import { Markdown } from '@/components/Markdown';

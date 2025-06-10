@@ -1,11 +1,6 @@
+import { type IAction, type IMessageElement, type IStep } from '@/react-client';
 import { MessageContext } from 'contexts/MessageContext';
 import React, { memo, useContext } from 'react';
-
-import {
-  type IAction,
-  type IMessageElement,
-  type IStep
-} from '@chainlit/react-client';
 
 import BlinkingCursor from '@/components/BlinkingCursor';
 

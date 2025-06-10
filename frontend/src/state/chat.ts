@@ -1,6 +1,6 @@
+import { ICommand } from '@/react-client';
 import { RecoilState, atom } from 'recoil';
 
-import { ICommand } from 'client-types/*';
 
 export interface IAttachment {
   id: string;

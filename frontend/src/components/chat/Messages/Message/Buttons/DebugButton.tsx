@@ -1,6 +1,5 @@
+import { IStep } from '@/react-client';
 import { BugIcon } from 'lucide-react';
-
-import { IStep } from '@chainlit/react-client';
 
 import { Button } from '@/components/ui/button';
 import {

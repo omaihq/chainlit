@@ -1,4 +1,4 @@
-import { useConfig } from '@chainlit/react-client';
+import { useConfig } from '@/react-client';
 
 const useLayoutMaxWidth = () => {
   const { config } = useConfig();

@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { useChatMessages } from '@/react-client';
 import { ArrowDown } from 'lucide-react';
 import {
   MutableRefObject,
@@ -7,8 +8,6 @@ import {
   useRef,
   useState
 } from 'react';
-
-import { useChatMessages } from '@chainlit/react-client';
 
 import { Button } from '@/components/ui/button';
 

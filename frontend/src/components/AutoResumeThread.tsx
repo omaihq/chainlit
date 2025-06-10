@@ -1,14 +1,13 @@
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
-import { toast } from 'sonner';
-
 import {
   resumeThreadErrorState,
   useChatInteract,
   useChatSession,
   useConfig
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
+import { toast } from 'sonner';
 
 interface Props {
   id: string;

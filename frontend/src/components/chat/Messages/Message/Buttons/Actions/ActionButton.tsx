@@ -1,13 +1,8 @@
+import { ChainlitContext, type IAction, sessionIdState } from '@/react-client';
 import { MessageContext } from 'contexts/MessageContext';
 import { useCallback, useContext, useMemo, useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { toast } from 'sonner';
-
-import {
-  ChainlitContext,
-  type IAction,
-  sessionIdState
-} from '@chainlit/react-client';
 
 import Icon from '@/components/Icon';
 import { Loader } from '@/components/Loader';

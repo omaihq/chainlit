@@ -1,7 +1,6 @@
+import { useAudio, useAuth, useConfig } from '@/react-client';
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import { useAudio, useAuth, useConfig } from '@chainlit/react-client';
 
 import AudioPresence from '@/components/AudioPresence';
 import ButtonLink from '@/components/ButtonLink';

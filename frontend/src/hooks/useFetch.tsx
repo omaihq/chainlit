@@ -1,7 +1,6 @@
+import { ChainlitContext } from '@/react-client';
 import { useContext } from 'react';
 import useSWR, { SWRResponse } from 'swr';
-
-import { ChainlitContext } from '@chainlit/react-client';
 
 const fetcher =
   (isChainlitRequest: boolean) =>

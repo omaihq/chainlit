@@ -1,4 +1,4 @@
-import { FileSpec, useConfig } from '@chainlit/react-client';
+import { FileSpec, useConfig } from '@/react-client';
 
 import { Translator } from '@/components/i18n';
 import { PaperClip } from '@/components/icons/PaperClip';

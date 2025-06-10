@@ -1,10 +1,9 @@
+import { ChainlitContext, IThread } from '@/react-client';
 import _ from 'lodash';
 import { useContext, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
-
-import { ChainlitContext, IThread } from '@chainlit/react-client';
 
 import { Loader } from '@/components/Loader';
 import { Search } from '@/components/icons/Search';

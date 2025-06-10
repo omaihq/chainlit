@@ -1,6 +1,5 @@
+import { IDataframeElement } from '@/react-client';
 import { Suspense, lazy } from 'react';
-
-import { IDataframeElement } from '@chainlit/react-client';
 
 import { Skeleton } from '@/components/ui/skeleton';
 

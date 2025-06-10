@@ -1,11 +1,10 @@
+import * as ChainlitReactClient from '@/react-client';
 import * as LucideIcons from 'lucide-react';
 import React from 'react';
 import * as ReactHookForm from 'react-hook-form';
 import * as Recoil from 'recoil';
 import * as Sonner from 'sonner';
 import * as Zod from 'zod';
-
-import * as ChainlitReactClient from '@chainlit/react-client';
 
 import * as Markdown from '@/components/Markdown';
 import * as AccordionComponents from '@/components/ui/accordion';

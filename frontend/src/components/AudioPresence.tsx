@@ -1,7 +1,6 @@
 import { hslToHex } from '@/lib/utils';
+import { WavRenderer, useAudio } from '@/react-client';
 import { useEffect, useMemo, useRef } from 'react';
-
-import { WavRenderer, useAudio } from '@chainlit/react-client';
 
 import { useTheme } from '@/components/ThemeProvider';
 

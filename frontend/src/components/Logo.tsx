@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
+import { ChainlitContext, useConfig } from '@/react-client';
 import { useContext } from 'react';
-
-import { ChainlitContext, useConfig } from '@chainlit/react-client';
 
 import { useTheme } from './ThemeProvider';
 

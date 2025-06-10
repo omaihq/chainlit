@@ -1,3 +1,4 @@
+import type { FileSpec } from '@/react-client';
 import { useCallback } from 'react';
 import {
   DropzoneOptions,
@@ -5,8 +6,6 @@ import {
   FileWithPath,
   useDropzone
 } from 'react-dropzone';
-
-import type { FileSpec } from 'client-types/';
 
 interface useUploadProps {
   onError?: (error: string) => void;

@@ -1,4 +1,4 @@
-import { type ITextElement, useConfig } from '@chainlit/react-client';
+import { type ITextElement, useConfig } from '@/react-client';
 
 import Alert from '@/components/Alert';
 import { Markdown } from '@/components/Markdown';

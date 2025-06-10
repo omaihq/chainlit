@@ -1,7 +1,6 @@
+import { useAuth } from '@/react-client';
 import capitalize from 'lodash/capitalize';
 import { LogOut } from 'lucide-react';
-
-import { useAuth } from '@chainlit/react-client';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';

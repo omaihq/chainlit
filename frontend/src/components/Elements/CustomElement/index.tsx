@@ -1,4 +1,13 @@
 import {
+  ChainlitContext,
+  IAction,
+  ICustomElement,
+  IElement,
+  sessionIdState,
+  useAuth,
+  useChatInteract
+} from '@/react-client';
+import {
   memo,
   useCallback,
   useContext,
@@ -9,16 +18,6 @@ import {
 import { Runner } from 'react-runner';
 import { useRecoilValue } from 'recoil';
 import { v4 as uuidv4 } from 'uuid';
-
-import {
-  ChainlitContext,
-  IAction,
-  ICustomElement,
-  IElement,
-  sessionIdState,
-  useAuth,
-  useChatInteract
-} from '@chainlit/react-client';
 
 import Alert from '@/components/Alert';
 

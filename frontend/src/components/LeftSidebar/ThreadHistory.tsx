@@ -1,13 +1,12 @@
-import { uniqBy } from 'lodash';
-import { useContext, useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
-
 import {
   ChainlitContext,
   threadHistoryState,
   useChatMessages
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { uniqBy } from 'lodash';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
 
 import {
   SidebarContent,

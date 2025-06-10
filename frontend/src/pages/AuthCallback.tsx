@@ -1,7 +1,6 @@
+import { useAuth } from '@/react-client';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import { useAuth } from '@chainlit/react-client';
 
 export default function AuthCallback() {
   const { user, setUserFromAPI } = useAuth();

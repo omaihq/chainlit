@@ -1,6 +1,5 @@
+import { ChainlitContext } from '@/react-client';
 import { useContext } from 'react';
-
-import { ChainlitContext } from '@chainlit/react-client';
 
 import { Button } from '@/components/ui/button';
 import {

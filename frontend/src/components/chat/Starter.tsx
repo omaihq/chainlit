@@ -1,7 +1,3 @@
-import { useCallback, useContext } from 'react';
-import { useRecoilValue } from 'recoil';
-import { v4 as uuidv4 } from 'uuid';
-
 import {
   ChainlitContext,
   IStarter,
@@ -9,7 +5,10 @@ import {
   useAuth,
   useChatData,
   useChatInteract
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { useCallback, useContext } from 'react';
+import { useRecoilValue } from 'recoil';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Button } from '@/components/ui/button';
 

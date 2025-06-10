@@ -1,4 +1,4 @@
-import type { IFileElement } from '@chainlit/react-client';
+import type { IFileElement } from '@/react-client';
 
 import { FileElement } from '@/components/Elements/File';
 

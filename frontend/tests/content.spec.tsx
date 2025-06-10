@@ -1,10 +1,9 @@
+// Import the toBeInTheDocument function
+import type { ITextElement } from '@/react-client';
 import { render } from '@testing-library/react';
 import { expect, it } from 'vitest';
 
 import { MessageContent } from 'components/chat/Messages/Message/Content';
-
-// Import the toBeInTheDocument function
-import type { ITextElement } from '@chainlit/react-client';
 
 it('renders the message content', () => {
   const { getByText } = render(

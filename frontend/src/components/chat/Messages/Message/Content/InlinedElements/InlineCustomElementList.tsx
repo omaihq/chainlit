@@ -1,4 +1,4 @@
-import type { ICustomElement } from '@chainlit/react-client';
+import type { ICustomElement } from '@/react-client';
 
 import CustomElement from '@/components/Elements/CustomElement';
 

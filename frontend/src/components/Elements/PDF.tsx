@@ -1,4 +1,4 @@
-import { type IPdfElement } from 'client-types/';
+import { type IPdfElement } from '@/react-client';
 
 interface Props {
   element: IPdfElement;

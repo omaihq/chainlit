@@ -1,7 +1,6 @@
 import { prepareContent } from '@/lib/message';
+import type { IMessageElement, IStep } from '@/react-client';
 import { memo } from 'react';
-
-import type { IMessageElement, IStep } from '@chainlit/react-client';
 
 import { CURSOR_PLACEHOLDER } from '@/components/BlinkingCursor';
 import { Markdown } from '@/components/Markdown';

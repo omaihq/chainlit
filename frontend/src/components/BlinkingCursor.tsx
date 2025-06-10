@@ -1,10 +1,9 @@
+import { responseProgressState } from '@/react-client/state';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 
 import { Loader } from '@/components/Loader';
-
-import { responseProgressState } from 'client-types/*';
 
 export const CURSOR_PLACEHOLDER = '\u200B';
 

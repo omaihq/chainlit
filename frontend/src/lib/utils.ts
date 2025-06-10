@@ -1,7 +1,6 @@
+import { IStep } from '@/react-client';
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-
-import { IStep } from '@chainlit/react-client';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

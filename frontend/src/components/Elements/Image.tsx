@@ -1,8 +1,7 @@
 import { cn } from '@/lib/utils';
+import { IImageElement } from '@/react-client';
 import { X } from 'lucide-react';
 import { useState } from 'react';
-
-import { IImageElement } from '@chainlit/react-client';
 
 import {
   Dialog,

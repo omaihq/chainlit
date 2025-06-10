@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
+import type { IStep } from '@/react-client';
 import { PropsWithChildren, useMemo } from 'react';
-
-import type { IStep } from '@chainlit/react-client';
 
 import {
   Accordion,

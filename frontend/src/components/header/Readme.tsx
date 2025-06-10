@@ -1,4 +1,4 @@
-import { useConfig } from '@chainlit/react-client';
+import { useConfig } from '@/react-client';
 
 import { Markdown } from '@/components/Markdown';
 import { Button } from '@/components/ui/button';

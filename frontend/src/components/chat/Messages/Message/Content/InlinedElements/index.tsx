@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils';
-
-import type { ElementType, IMessageElement } from '@chainlit/react-client';
+import type { ElementType, IMessageElement } from '@/react-client';
 
 import { InlinedCustomElementList } from './InlineCustomElementList';
 import { InlinedAudioList } from './InlinedAudioList';

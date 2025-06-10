@@ -7,7 +7,7 @@ import { useTheme } from '@/components/ThemeProvider';
 
 import { useQuery } from 'hooks/query';
 
-import { ChainlitContext, useAuth } from 'client-types/*';
+import { ChainlitContext, useAuth } from '@/react-client';
 
 export const LoginError = new Error(
   'Error logging in. Please try again later.'

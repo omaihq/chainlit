@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils';
-
-import { IImageElement, IVideoElement } from '@chainlit/react-client';
+import { IImageElement, IVideoElement } from '@/react-client';
 
 const sizeToUnit = (element: IImageElement | IVideoElement) => {
   switch (element.size) {

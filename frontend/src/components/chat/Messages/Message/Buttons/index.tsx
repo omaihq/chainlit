@@ -3,7 +3,7 @@ import {
   type IStep,
   useChatMessages,
   useConfig
-} from '@chainlit/react-client';
+} from '@/react-client';
 
 import CopyButton from '@/components/CopyButton';
 

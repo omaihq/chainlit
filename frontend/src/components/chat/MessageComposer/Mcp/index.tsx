@@ -1,8 +1,7 @@
+import { mcpState, useConfig } from '@/react-client';
 import { Plug } from 'lucide-react';
 import { useState } from 'react';
 import { useRecoilState } from 'recoil';
-
-import { mcpState, useConfig } from '@chainlit/react-client';
 
 import { Button } from '@/components/ui/button';
 import {

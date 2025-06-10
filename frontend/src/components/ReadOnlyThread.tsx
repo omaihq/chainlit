@@ -1,10 +1,4 @@
 import { MessageContext } from '@/contexts/MessageContext';
-import { useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
-import { toast } from 'sonner';
-
 import {
   ChainlitContext,
   IAction,
@@ -16,7 +10,12 @@ import {
   sideViewState,
   useApi,
   useConfig
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { toast } from 'sonner';
 
 import { useLayoutMaxWidth } from 'hooks/useLayoutMaxWidth';
 

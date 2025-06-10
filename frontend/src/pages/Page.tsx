@@ -1,7 +1,6 @@
+import { sideViewState, useAuth, useConfig } from '@/react-client';
 import { Navigate } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-
-import { sideViewState, useAuth, useConfig } from '@chainlit/react-client';
 
 import ElementSideView from '@/components/ElementSideView';
 import LeftSidebar from '@/components/LeftSidebar';

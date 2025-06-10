@@ -1,9 +1,3 @@
-import { useCallback, useEffect, useMemo, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
-import { toast } from 'sonner';
-import { v4 as uuidv4 } from 'uuid';
-
 import {
   threadHistoryState,
   useAuth,
@@ -11,7 +5,12 @@ import {
   useChatInteract,
   useChatMessages,
   useConfig
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { toast } from 'sonner';
+import { v4 as uuidv4 } from 'uuid';
 
 import Alert from '@/components/Alert';
 import { TaskList } from '@/components/Tasklist';

@@ -1,13 +1,8 @@
 import { MessageContext } from '@/contexts/MessageContext';
+import { IStep, firstUserInteraction, useChatSession } from '@/react-client';
 import { MessageCircle, ThumbsDown, ThumbsUp } from 'lucide-react';
 import { useCallback, useContext, useState } from 'react';
 import { useRecoilValue } from 'recoil';
-
-import {
-  IStep,
-  firstUserInteraction,
-  useChatSession
-} from '@chainlit/react-client';
 
 import Translator from '@/components/i18n/Translator';
 import { Button } from '@/components/ui/button';

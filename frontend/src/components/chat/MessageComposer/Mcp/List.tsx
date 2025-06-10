@@ -1,15 +1,14 @@
 import { cn } from '@/lib/utils';
-import { Link, RefreshCw, SquareTerminal, Trash2, Wrench } from 'lucide-react';
-import { useContext, useState } from 'react';
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
-import { toast } from 'sonner';
-
 import {
   ChainlitContext,
   IMcp,
   mcpState,
   sessionIdState
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { Link, RefreshCw, SquareTerminal, Trash2, Wrench } from 'lucide-react';
+import { useContext, useState } from 'react';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
+import { toast } from 'sonner';
 
 import CopyButton from '@/components/CopyButton';
 import {

@@ -1,7 +1,6 @@
+import { type IAction } from '@/react-client';
 import { MessageContext } from 'contexts/MessageContext';
 import { useContext, useMemo } from 'react';
-
-import { type IAction } from '@chainlit/react-client';
 
 import Icon from '@/components/Icon';
 import { Button } from '@/components/ui/button';

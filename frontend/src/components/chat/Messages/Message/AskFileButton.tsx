@@ -1,8 +1,7 @@
+import { IAsk, IFileRef } from '@/react-client';
 import { MessageContext } from 'contexts/MessageContext';
 import { Upload } from 'lucide-react';
 import { useContext, useState } from 'react';
-
-import { IAsk, IFileRef } from '@chainlit/react-client';
 
 import { Translator } from '@/components/i18n';
 import { useTranslation } from '@/components/i18n/Translator';

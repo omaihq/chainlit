@@ -1,4 +1,4 @@
-import type { IMessageElement } from 'client-types/';
+import type { IMessageElement } from '@/react-client';
 
 const isForIdMatch = (id: string | number | undefined, forId: string) => {
   if (!forId || !id) {

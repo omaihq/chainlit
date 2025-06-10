@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
+import { ICommand, commandsState } from '@/react-client';
 import { useRecoilValue } from 'recoil';
-
-import { ICommand, commandsState } from '@chainlit/react-client';
 
 import Icon from '@/components/Icon';
 import { Button } from '@/components/ui/button';

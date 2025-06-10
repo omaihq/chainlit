@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
+import { useChatSession, useConfig } from '@/react-client';
 import { useMemo } from 'react';
-
-import { useChatSession, useConfig } from '@chainlit/react-client';
 
 import Starter from './Starter';
 

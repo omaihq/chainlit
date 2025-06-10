@@ -1,4 +1,4 @@
-import type { IPlotlyElement } from '@chainlit/react-client';
+import type { IPlotlyElement } from '@/react-client';
 
 import { PlotlyElement } from '@/components/Elements/Plotly';
 

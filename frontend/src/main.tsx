@@ -1,10 +1,9 @@
+import { ChainlitContext } from '@/react-client';
 import AppWrapper from 'AppWrapper';
 import { apiClient } from 'api';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RecoilRoot } from 'recoil';
-
-import { ChainlitContext } from '@chainlit/react-client';
 
 import './index.css';
 

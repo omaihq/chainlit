@@ -1,3 +1,4 @@
+import { ICommand, commandsState } from '@/react-client';
 import {
   Popover,
   PopoverContent,
@@ -5,8 +6,6 @@ import {
 } from '@radix-ui/react-popover';
 import { every } from 'lodash';
 import { useRecoilValue } from 'recoil';
-
-import { ICommand, commandsState } from '@chainlit/react-client';
 
 import Icon from '@/components/Icon';
 import { ToolBox } from '@/components/icons/ToolBox';

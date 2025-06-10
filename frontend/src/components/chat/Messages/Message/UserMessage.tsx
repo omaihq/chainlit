@@ -1,14 +1,13 @@
 import { cn } from '@/lib/utils';
-import { MessageContext } from 'contexts/MessageContext';
-import { useContext, useMemo, useState } from 'react';
-import { useSetRecoilState } from 'recoil';
-
 import {
   IMessageElement,
   IStep,
   messagesState,
   useChatInteract
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { MessageContext } from 'contexts/MessageContext';
+import { useContext, useMemo, useState } from 'react';
+import { useSetRecoilState } from 'recoil';
 
 import AutoResizeTextarea from '@/components/AutoResizeTextarea';
 import { Pencil } from '@/components/icons/Pencil';

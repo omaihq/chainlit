@@ -1,11 +1,4 @@
 import { cn } from '@/lib/utils';
-import { size } from 'lodash';
-import { useContext, useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router-dom';
-import { useSetRecoilState } from 'recoil';
-import { toast } from 'sonner';
-
 import {
   ChainlitContext,
   ClientError,
@@ -14,7 +7,13 @@ import {
   useChatInteract,
   useChatMessages,
   useChatSession
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { size } from 'lodash';
+import { useContext, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { toast } from 'sonner';
 
 import Alert from '@/components/Alert';
 import { Loader } from '@/components/Loader';

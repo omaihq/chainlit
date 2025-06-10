@@ -1,7 +1,6 @@
 import { cn, hasMessage } from '@/lib/utils';
+import { FileSpec, useChatMessages } from '@/react-client';
 import { MutableRefObject } from 'react';
-
-import { FileSpec, useChatMessages } from '@chainlit/react-client';
 
 import WaterMark from '@/components/WaterMark';
 

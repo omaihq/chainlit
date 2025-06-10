@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils';
-
-import { IAudioElement } from '@chainlit/react-client';
+import { IAudioElement } from '@/react-client';
 
 const AudioElement = ({ element }: { element: IAudioElement }) => {
   if (!element.url) {

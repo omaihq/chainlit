@@ -1,9 +1,8 @@
 import { cn } from '@/lib/utils';
+import { sideViewState } from '@/react-client';
 import { ArrowLeft } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useRecoilState } from 'recoil';
-
-import { sideViewState } from '@chainlit/react-client';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { ResizableHandle, ResizablePanel } from '@/components/ui/resizable';

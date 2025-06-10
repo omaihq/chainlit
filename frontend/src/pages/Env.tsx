@@ -1,3 +1,4 @@
+import { useConfig } from '@/react-client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
@@ -5,8 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { toast } from 'sonner';
 import { z } from 'zod';
-
-import { useConfig } from '@chainlit/react-client';
 
 import Alert from '@/components/Alert';
 import { Button } from '@/components/ui/button';

@@ -1,4 +1,4 @@
-import type { IPdfElement } from '@chainlit/react-client';
+import type { IPdfElement } from '@/react-client';
 
 import { PDFElement } from '@/components/Elements/PDF';
 

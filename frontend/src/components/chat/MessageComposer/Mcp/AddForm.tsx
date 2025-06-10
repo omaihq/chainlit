@@ -1,12 +1,7 @@
+import { ChainlitContext, mcpState, sessionIdState } from '@/react-client';
 import { useContext, useState } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { toast } from 'sonner';
-
-import {
-  ChainlitContext,
-  mcpState,
-  sessionIdState
-} from '@chainlit/react-client';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';

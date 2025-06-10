@@ -1,10 +1,10 @@
-import type {
+import {
   IAsk,
   IFeedback,
   IFileRef,
   IMessageElement,
   IStep
-} from '@chainlit/react-client';
+} from '@/react-client';
 
 interface IMessageContext {
   uploadFile?: (

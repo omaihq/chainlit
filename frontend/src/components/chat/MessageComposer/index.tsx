@@ -1,15 +1,14 @@
-import { MutableRefObject, useCallback, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useRecoilState, useSetRecoilState } from 'recoil';
-import { v4 as uuidv4 } from 'uuid';
-
 import {
   FileSpec,
   IStep,
   useAuth,
   useChatData,
   useChatInteract
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { MutableRefObject, useCallback, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useRecoilState, useSetRecoilState } from 'recoil';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Settings } from '@/components/icons/Settings';
 import { Button } from '@/components/ui/button';

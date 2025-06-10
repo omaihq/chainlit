@@ -1,14 +1,9 @@
+import { threadHistoryState, useChatMessages, useConfig } from '@/react-client';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 
 import Page from 'pages/Page';
-
-import {
-  threadHistoryState,
-  useChatMessages,
-  useConfig
-} from '@chainlit/react-client';
 
 import AutoResumeThread from '@/components/AutoResumeThread';
 import { Loader } from '@/components/Loader';

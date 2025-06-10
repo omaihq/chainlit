@@ -1,7 +1,6 @@
+import { useAudio, useConfig } from '@/react-client';
 import { X } from 'lucide-react';
 import { useHotkeys } from 'react-hotkeys-hook';
-
-import { useAudio, useConfig } from '@chainlit/react-client';
 
 import AudioPresence from '@/components/AudioPresence';
 import {

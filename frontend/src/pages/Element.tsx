@@ -1,14 +1,13 @@
-import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-
-import Page from 'pages/Page';
-
 import {
   IMessageElement,
   useApi,
   useChatData,
   useConfig
-} from '@chainlit/react-client';
+} from '@/react-client';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+
+import Page from 'pages/Page';
 
 import Alert from '@/components/Alert';
 import { ElementView } from '@/components/ElementView';
